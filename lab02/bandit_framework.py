@@ -21,7 +21,7 @@ class Arm:
         self.activation_probability = activation_probability # how likely is that the arm would yield any payout
         self.payout_function = payout_function # function called to calculate payout
 
-    def pull(self): # returns the value of the ayout function or 0, according to the activation probability
+    def pull(self): # returns the value of the payout function or 0, according to the activation probability
         if random() <= self.activation_probability:
             return max(self.payout_function(), 0)
         else:
